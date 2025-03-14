@@ -3,7 +3,6 @@ const ctx = canvas.getContext('2d');
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 function resizeCanvas() {
-    // Canvas vult de gehele viewport
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     drawPolygon();
@@ -23,7 +22,7 @@ function resizeCanvas() {
     drawDiagonalLine();
     drawCircle(0.33 * canvas.width, 0.98 * canvas.height, "#FAFAD2");
     drawCircle(0.45 * canvas.width, 0.02 * canvas.height, "#FAFAD2");
-}
+};
 
 function drawLinesAroundRectangle() {
     const radius = 20; // Pas de straal van de afgeronde hoeken aan
@@ -43,6 +42,7 @@ function drawLinesAroundRectangle() {
     ctx.lineWidth = 2;
     ctx.stroke();
 };
+
 function drawLinesAroundImage() {
     ctx.beginPath();
     ctx.moveTo(0.33 * canvas.width, 0.98 * canvas.height);
@@ -52,7 +52,7 @@ function drawLinesAroundImage() {
     ctx.strokeStyle = 'orange';
     ctx.lineWidth = 2;
     ctx.stroke();
-}
+};
 
 function drawPolygon() {
     // Definieer de punten van de polygon als percentages
@@ -83,7 +83,7 @@ function drawPolygon() {
 
     ctx.closePath();
     ctx.stroke();
-}
+};
 
 function drawArc() {
     ctx.beginPath();
@@ -92,7 +92,7 @@ function drawArc() {
     ctx.strokeStyle = "orange";
     ctx.lineWidth = 2;
     ctx.stroke();
-}
+};
 
 function drawTinyArc1() {
     ctx.beginPath();
@@ -103,7 +103,7 @@ function drawTinyArc1() {
     ctx.fill();
     ctx.stroke();
     ctx.closePath();
-}
+};
 
 function drawTinyArc2() {
     ctx.beginPath();
@@ -114,7 +114,7 @@ function drawTinyArc2() {
     ctx.fill();
     ctx.stroke();
     ctx.closePath();
-}
+};
 
 function drawTinyArc3() {
     ctx.beginPath();
@@ -125,7 +125,7 @@ function drawTinyArc3() {
     ctx.fill();
     ctx.stroke();
     ctx.closePath();
-}
+};
 
 function drawTriangle1() {
     // the triangle
@@ -139,7 +139,7 @@ function drawTriangle1() {
     ctx.fill();
     ctx.stroke();
     ctx.closePath();
-}
+};
 
 function drawTriangle2() {
     // the triangle
@@ -156,7 +156,7 @@ function drawTriangle2() {
     ctx.stroke();
     ctx.closePath();
 
-}
+};
 
 function drawTriangle3() {
     // the triangle
@@ -172,7 +172,7 @@ function drawTriangle3() {
     ctx.lineWidth = 2;
     ctx.stroke();
     ctx.closePath();
-}
+};
 
 function drawDiagonalLine() {
     ctx.beginPath();
@@ -196,7 +196,7 @@ function drawDiagonalLine() {
     ctx.strokeStyle = 'orange';
     ctx.lineWidth = 2;
     ctx.stroke();
-}
+};
 
 function drawCircle(x, y, color) {
     ctx.beginPath();
@@ -204,7 +204,7 @@ function drawCircle(x, y, color) {
     ctx.fillStyle = color;
     ctx.fill();
     ctx.stroke();
-}
+};
 
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
