@@ -31,7 +31,14 @@ body {
     top: 92%;
     left: 4%;
     z-index: 40;
+    overflow: hidden;
 }
+
+/* change color of logo without using a new image */
+.logo img {  
+    filter: drop-shadow(0px 1000px 0 #FAFAD2);
+    transform: translateY(-1000px);
+  }
 
 /* Canvas komt boven de afbeelding */
 #bgCanvas {
@@ -44,34 +51,28 @@ body {
 .content {
     position: absolute;
     margin-top: 30%;
-    left: 70%;
+    left: 20%;
     transform: translate(-50%, -50%);
     z-index: 30;
     text-align: center;
 }
 
 .title {
-    color: orange;
+    color: #FAFAD2;
     font-size: 3.2vw;
     font-family: Arial, sans-serif;
     margin: 0px;
-}
-
-.subTitle {
-    color: black;
-    font-size: 0.8vw;
     text-align: left;
-    margin: 0px;
-    font-family: Arial, sans-serif;
 }
 
 .calenderItems {
     margin-top: 2vw;
+    min-width: 15vw;
 }
 
 h2 {
     text-align: left;
-    color: orange;
+    color: #FAFAD2;
     /* Oranje kleur */
     font-size: 24px;
 }
@@ -85,16 +86,19 @@ h2 {
 .date {
     font-size: 0.8vw;
     font-weight: bold;
-    min-width: 30%;
+    min-width: 50%;
     text-align: left;
 }
 
 .details {
     font-size: 0.8vw;
     text-align: left;
-    margin-left: 20%;
+    margin-left: 30%;
+    min-width: 100%;
 }
 
-.details strong {
+.details p {
     display: block;
+    margin-top: 0px;
+    min-width: 50%;
 }
